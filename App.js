@@ -15,6 +15,7 @@ import {
   Platform,
   Alert,
   TouchableOpacity,
+  StatusBar,
 } from 'react-native';
 import colors from './colorScheme';
 
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
   container: {
     fontFamily: 'Roboto',
     //MarginTop needed for ios, for text not to be next to notch
-    marginTop: Platform.OS === 'android' ? 32 : 0,
+    marginTop: Platform.OS === 'android' ? StatusBar.height : 0,
     //Not a normal css property, part of react native enhancements
     // paddingHorizontal: 24,
     flex: 1,
@@ -114,8 +115,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#012e67',
     position: 'absolute',
-    top: 0,
-    right: 0,
+    top: '0.1%',
+    right: '0.1%',
   },
   row: {
     flexDirection: 'row',
