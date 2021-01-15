@@ -14,6 +14,7 @@ import {
   Text,
   Platform,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 import colors from './colorScheme';
 
@@ -38,7 +39,7 @@ const App: () => React$Node = () => {
         {' '}
         Login{' '}
       </Text>
-      <View
+      <TouchableOpacity
         style={[styles.buttonStyles, styles.buttonFacebook]}
         onPress={() => {
           console.log('FB Button pressed');
@@ -48,8 +49,8 @@ const App: () => React$Node = () => {
           accessibilityLabel="Sign up with Facebook button">
           Sign up with Facebook
         </Text>
-      </View>
-      <View
+      </TouchableOpacity>
+      <TouchableOpacity
         style={[styles.buttonStyles, styles.buttonLinkedIn]}
         onPress={() => {
           console.log('LinkedIn Button pressed');
@@ -59,7 +60,7 @@ const App: () => React$Node = () => {
           accessibilityLabel="Sign up with LinkedIn button">
           Sign up with LinkedIn
         </Text>
-      </View>
+      </TouchableOpacity>
 
       <View style={[styles.buttonStyles, styles.row]}>
         <View style={styles.dividerLine} />
@@ -69,7 +70,7 @@ const App: () => React$Node = () => {
         <View style={styles.dividerLine} />
       </View>
 
-      <View
+      <TouchableOpacity
         style={[styles.buttonStyles, styles.buttonEmail]}
         onPress={() => {
           console.log('Email Button pressed');
@@ -79,7 +80,7 @@ const App: () => React$Node = () => {
           accessibilityLabel="Sign up with Email button">
           Sign up using Email
         </Text>
-      </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
