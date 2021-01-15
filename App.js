@@ -27,6 +27,25 @@ import colors from './colorScheme';
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
 
+function SignUpButton(props: {
+  css: Object,
+  text: string,
+  accessibilityLabel: string,
+  onPress: () => void,
+}) {
+  return (
+    <TouchableOpacity
+      style={[styles.buttonStyles, props.css]}
+      onPress={props.onPress}>
+      <Text
+        style={styles.buttonText}
+        accessibilityLabel={props.accessibilityLabel}>
+        {props.text}
+      </Text>
+    </TouchableOpacity>
+  );
+}
+
 const App: () => React$Node = () => {
   // console.log('React native debugging');
   function getLog() {
@@ -39,28 +58,22 @@ const App: () => React$Node = () => {
         {' '}
         Login{' '}
       </Text>
-      <TouchableOpacity
-        style={[styles.buttonStyles, styles.buttonFacebook]}
+      <SignUpButton
+        text="Sign up with Facebook"
+        accessibilityLabel="Sign up with Facebook button"
+        css={styles.buttonFacebook}
         onPress={() => {
           console.log('FB Button pressed');
-        }}>
-        <Text
-          style={styles.buttonText}
-          accessibilityLabel="Sign up with Facebook button">
-          Sign up with Facebook
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[styles.buttonStyles, styles.buttonLinkedIn]}
+        }}
+      />
+      <SignUpButton
+        text="Sign up with LinkedIn"
+        accessibilityLabel="Sign up with LinkedIn button"
+        css={styles.buttonLinkedIn}
         onPress={() => {
           console.log('LinkedIn Button pressed');
-        }}>
-        <Text
-          style={styles.buttonText}
-          accessibilityLabel="Sign up with LinkedIn button">
-          Sign up with LinkedIn
-        </Text>
-      </TouchableOpacity>
+        }}
+      />
 
       <View style={[styles.buttonStyles, styles.row]}>
         <View style={styles.dividerLine} />
@@ -70,17 +83,14 @@ const App: () => React$Node = () => {
         <View style={styles.dividerLine} />
       </View>
 
-      <TouchableOpacity
-        style={[styles.buttonStyles, styles.buttonEmail]}
+      <SignUpButton
+        text="Sign up with Email"
+        accessibilityLabel="Sign up with Email button"
+        css={styles.buttonEmail}
         onPress={() => {
           console.log('Email Button pressed');
-        }}>
-        <Text
-          style={styles.buttonText}
-          accessibilityLabel="Sign up with Email button">
-          Sign up using Email
-        </Text>
-      </TouchableOpacity>
+        }}
+      />
     </SafeAreaView>
   );
 };
