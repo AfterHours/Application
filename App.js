@@ -7,7 +7,14 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text, Platform} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+  Platform,
+  Alert,
+} from 'react-native';
 import colors from './colorScheme';
 
 //Default react native imports
