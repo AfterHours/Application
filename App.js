@@ -8,6 +8,8 @@
 
 import React from 'react';
 import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
+import {Icon} from 'react-native-elements';
+
 import styles from './styles';
 
 //Default react native imports
@@ -22,19 +24,30 @@ import styles from './styles';
 function SignUpButton(props: {
   css: Object,
   text: string,
+  platform: string,
+  type: string,
   accessibilityLabel: string,
   onPress: () => void,
 }) {
+  function showIcon(platform, type) {
+    if (platform) {
+      return <Icon name={platform} type={type} color="#FFF" />;
+    }
+  }
+
   return (
-    <TouchableOpacity
-      style={[styles.buttonStyles, props.css]}
-      onPress={props.onPress}>
-      <Text
-        style={styles.buttonText}
-        accessibilityLabel={props.accessibilityLabel}>
-        {props.text}
-      </Text>
-    </TouchableOpacity>
+    <>
+      <TouchableOpacity
+        style={[styles.buttonStyles, props.css]}
+        onPress={props.onPress}>
+        {showIcon(props.platform, props.type)}
+        <Text
+          style={styles.buttonText}
+          accessibilityLabel={props.accessibilityLabel}>
+          {props.text}
+        </Text>
+      </TouchableOpacity>
+    </>
   );
 }
 
@@ -52,6 +65,8 @@ const App: () => React$Node = () => {
       </Text>
       <SignUpButton
         text="Sign up with Facebook"
+        platform="facebook-square"
+        type="font-awesome-5"
         accessibilityLabel="Sign up with Facebook button"
         css={styles.buttonFacebook}
         onPress={() => {
@@ -60,6 +75,8 @@ const App: () => React$Node = () => {
       />
       <SignUpButton
         text="Sign up with LinkedIn"
+        platform="linkedin"
+        type="font-awesome-5"
         accessibilityLabel="Sign up with LinkedIn button"
         css={styles.buttonLinkedIn}
         onPress={() => {
@@ -77,6 +94,8 @@ const App: () => React$Node = () => {
 
       <SignUpButton
         text="Sign up with Email"
+        platform="envelope"
+        type="font-awesome-5"
         accessibilityLabel="Sign up with Email button"
         css={styles.buttonEmail}
         onPress={() => {
