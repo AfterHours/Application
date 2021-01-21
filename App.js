@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
-import {Icon} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
 
@@ -37,16 +37,18 @@ function SignUpButton(props: {
 
   return (
     <>
-      <TouchableOpacity
+      <Icon.Button
+        name={props.platform}
         style={[styles.buttonStyles, props.css]}
-        onPress={props.onPress}>
-        {showIcon(props.platform, props.type)}
+        onPress={props.onPress}
+        backgroundColor=" rgba(0, 122, 255, 0)">
+        {/*Background color set to invisible cause if not default is blue*/}
         <Text
           style={styles.buttonText}
           accessibilityLabel={props.accessibilityLabel}>
           {props.text}
         </Text>
-      </TouchableOpacity>
+      </Icon.Button>
     </>
   );
 }
