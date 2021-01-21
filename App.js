@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
+import {SafeAreaView, View, Text, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
@@ -29,12 +29,6 @@ function SignUpButton(props: {
   accessibilityLabel: string,
   onPress: () => void,
 }) {
-  function showIcon(platform, type) {
-    if (platform) {
-      return <Icon name={platform} type={type} color="#FFF" />;
-    }
-  }
-
   return (
     <>
       <Icon.Button
