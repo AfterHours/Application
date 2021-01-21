@@ -25,24 +25,25 @@ function SignUpButton(props: {
   css: Object,
   text: string,
   platform: string,
-  type: string,
   accessibilityLabel: string,
   onPress: () => void,
 }) {
   return (
     <>
-      <Icon.Button
+      <Icon
+        size={20}
+        color="#FFF"
         name={props.platform}
         style={[styles.buttonStyles, props.css]}
         onPress={props.onPress}
-        backgroundColor=" rgba(0, 122, 255, 0)">
+        backgroundColor="white">
         {/*Background color set to invisible cause if not default is blue*/}
         <Text
           style={styles.buttonText}
           accessibilityLabel={props.accessibilityLabel}>
-          {props.text}
+          {'   ' + props.text}
         </Text>
-      </Icon.Button>
+      </Icon>
     </>
   );
 }
