@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   buttonStyles: {
+    textAlign: 'center',
     padding: 15,
     margin: 10,
     width: 300,
