@@ -10,6 +10,8 @@ import React from 'react';
 import {SafeAreaView, View, Text, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+Icon.loadFont();
+
 import styles from './styles';
 
 //Default react native imports
@@ -56,49 +58,52 @@ const App: () => React$Node = () => {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.LoginText} onPress={() => getLog()}>
-        {' '}
-        Login{' '}
-      </Text>
-      <SignUpButton
-        text="Sign up with Facebook"
-        platform="facebook-square"
-        type="font-awesome-5"
-        accessibilityLabel="Sign up with Facebook button"
-        css={styles.buttonFacebook}
-        onPress={() => {
-          console.log('FB Button pressed');
-        }}
-      />
-      <SignUpButton
-        text="Sign up with LinkedIn"
-        platform="linkedin"
-        type="font-awesome-5"
-        accessibilityLabel="Sign up with LinkedIn button"
-        css={styles.buttonLinkedIn}
-        onPress={() => {
-          console.log('LinkedIn Button pressed');
-        }}
-      />
-
-      <View style={[styles.buttonStyles, styles.row]}>
-        <View style={styles.dividerLine} />
-        <View>
-          <Text style={styles.dividerText}>or</Text>
-        </View>
-        <View style={styles.dividerLine} />
+      <View style={styles.loginContainer}>
+        <Text style={styles.loginText} onPress={() => getLog()}>
+          Login
+        </Text>
       </View>
+      <View>
+        <SignUpButton
+          text="Sign up with Facebook"
+          platform="facebook-square"
+          type="font-awesome-5"
+          accessibilityLabel="Sign up with Facebook button"
+          css={styles.buttonFacebook}
+          onPress={() => {
+            console.log('FB Button pressed');
+          }}
+        />
+        <SignUpButton
+          text="Sign up with LinkedIn"
+          platform="linkedin"
+          type="font-awesome-5"
+          accessibilityLabel="Sign up with LinkedIn button"
+          css={styles.buttonLinkedIn}
+          onPress={() => {
+            console.log('LinkedIn Button pressed');
+          }}
+        />
 
-      <SignUpButton
-        text="Sign up with Email"
-        platform="envelope"
-        type="font-awesome-5"
-        accessibilityLabel="Sign up with Email button"
-        css={styles.buttonEmail}
-        onPress={() => {
-          console.log('Email Button pressed');
-        }}
-      />
+        <View style={[styles.buttonStyles, styles.row]}>
+          <View style={styles.dividerLine} />
+          <View>
+            <Text style={styles.dividerText}>or</Text>
+          </View>
+          <View style={styles.dividerLine} />
+        </View>
+
+        <SignUpButton
+          text="Sign up with Email"
+          platform="envelope"
+          type="font-awesome-5"
+          accessibilityLabel="Sign up with Email button"
+          css={styles.buttonEmail}
+          onPress={() => {
+            console.log('Email Button pressed');
+          }}
+        />
+      </View>
     </SafeAreaView>
   );
 };
