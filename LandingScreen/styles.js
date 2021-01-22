@@ -1,5 +1,5 @@
 import {Platform, StatusBar, StyleSheet} from 'react-native';
-import colors from './colorScheme';
+import colors from '../colorScheme';
 
 const styles = StyleSheet.create({
   container: {
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 20,
     color: colors.white,
-    textAlign: 'right',
+    textAlign: 'center',
   },
   buttonStyles: {
     textAlign: 'center',
