@@ -38,20 +38,16 @@ function SignUpButton(props: {
 }) {
   return (
     <>
-      <Icon
-        size={20}
-        color="#FFF"
-        name={props.platform}
+      <TouchableOpacity
         style={[styles.buttonStyles, props.css]}
-        onPress={props.onPress}
-        backgroundColor="white">
-        {/*Background color set to invisible cause if not default is blue*/}
+        onPress={props.onPress}>
         <Text
           style={styles.buttonText}
           accessibilityLabel={props.accessibilityLabel}>
-          {'   ' + props.text}
+          <Icon name={props.platform} size={20} color="#FFF" />{' '}
+          {'    ' + props.text}
         </Text>
-      </Icon>
+      </TouchableOpacity>
     </>
   );
 }
