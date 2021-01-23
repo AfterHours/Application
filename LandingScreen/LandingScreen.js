@@ -40,7 +40,9 @@ function SignUpButton(props: {
     <>
       <TouchableOpacity
         style={[styles.buttonStyles, props.css]}
-        onPress={props.onPress}>
+        onPress={props.onPress}
+        activeOpacity={0.90}
+        >
         <Text
           style={styles.buttonText}
           accessibilityLabel={props.accessibilityLabel}>
