@@ -57,7 +57,7 @@ const TextBox = (props) => {
 const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Create an account</Text>
       <TextBox
         defaultValue={'First Name'}
