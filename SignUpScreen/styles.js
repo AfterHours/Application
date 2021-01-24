@@ -7,6 +7,14 @@ const styles = StyleSheet.create({
     // fontFamily: 'Poppins',
     fontSize: 20,
     flex: 1,
+    alignItems: 'center',
+    backgroundColor: colors.white,
+  },
+  signupContainer: {
+    flex: 1,
+    width: 135,
+    alignItems: 'center',
+    // justifyContent: 'flex-end',
   },
   title: {
     fontSize: 34,
@@ -28,6 +36,13 @@ const styles = StyleSheet.create({
   buttonText: {
     color: colors.white,
     textAlign: 'center',
+  },
+  bottomWave: {
+    position: 'absolute',
+    width: 265.5,
+    height: 112,
+    right: 0,
+    bottom: 0,
   },
 });
 export default styles;

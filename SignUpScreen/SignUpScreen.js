@@ -7,7 +7,14 @@
  */
 
 import React from 'react';
-import {SafeAreaView, Text, TextInput, TouchableOpacity} from 'react-native';
+import {
+  Image,
+  SafeAreaView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 import styles from './styles';
 
@@ -58,49 +65,56 @@ const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Create an account</Text>
-      <TextBox
-        defaultValue={'First Name'}
-        multiline
-        numberOfLines={1}
-        onChangeText={(text) => onChangeText(text)}
-        // value={value}
-      />
-      <TextBox
-        defaultValue={'Last Name'}
-        multiline
-        numberOfLines={1}
-        onChangeText={(text) => onChangeText(text)}
-        // value={value}
-      />
-      <TextBox
-        defaultValue={'Email'}
-        multiline
-        numberOfLines={1}
-        onChangeText={(text) => onChangeText(text)}
-        // value={value}
-      />
-      <TextBox
-        defaultValue={'Password'}
-        multiline
-        numberOfLines={1}
-        onChangeText={(text) => onChangeText(text)}
-        // value={value}
-      />
-      <TextBox
-        defaultValue={'Confirm Password'}
-        multiline
-        numberOfLines={1}
-        onChangeText={(text) => onChangeText(text)}
-        // value={value}
-      />
-      <SignUpButton
-        css={styles.button}
-        text={'Create Account'}
-        accessibilityLabel={'Create Account Button'}
-        onPress={() => {
-          console.log('TODO SOMETHING');
-        }}
+      <View style={styles.signupContainer}>
+        <Text style={styles.title}>Create an account</Text>
+        <TextBox
+          defaultValue={'First Name'}
+          multiline
+          numberOfLines={1}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          defaultValue={'Last Name'}
+          multiline
+          numberOfLines={1}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          defaultValue={'Email'}
+          multiline
+          numberOfLines={1}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          defaultValue={'Password'}
+          multiline
+          numberOfLines={1}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          defaultValue={'Confirm Password'}
+          multiline
+          numberOfLines={1}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <SignUpButton
+          css={styles.button}
+          text={'Create Account'}
+          accessibilityLabel={'Create Account Button'}
+          onPress={() => {
+            console.log('TODO SOMETHING');
+          }}
+        />
+      </View>
+      {/* TODO Wave picture needs to get figured out*/}
+      <Image
+        style={styles.bottomWave}
+        source={require('./images/bottomWave.png')}
       />
     </SafeAreaView>
   );
