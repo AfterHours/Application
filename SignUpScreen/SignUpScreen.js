@@ -7,17 +7,9 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  Alert,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+import {SafeAreaView, Text, TextInput, TouchableOpacity} from 'react-native';
 
 import styles from './styles';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 //Default react native imports
 // import {
@@ -37,7 +29,7 @@ function SignUpButton(props: {
   return (
     <>
       <TouchableOpacity
-        style={[styles.buttonStyles, props.css]}
+        style={props.css}
         onPress={props.onPress}
         activeOpacity={0.9}>
         <Text
