@@ -7,9 +7,17 @@
  */
 
 import React from 'react';
-import {SafeAreaView, View, Text, Alert} from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  Text,
+  Alert,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
 import styles from './styles';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 //Default react native imports
 // import {
@@ -19,11 +27,88 @@ import styles from './styles';
 //   DebugInstructions,
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
+function SignUpButton(props: {
+  css: Object,
+  text: string,
+  platform: string,
+  accessibilityLabel: string,
+  onPress: () => void,
+}) {
+  return (
+    <>
+      <TouchableOpacity
+        style={[styles.buttonStyles, props.css]}
+        onPress={props.onPress}
+        activeOpacity={0.9}>
+        <Text
+          style={styles.buttonText}
+          accessibilityLabel={props.accessibilityLabel}>
+          {props.text}
+        </Text>
+      </TouchableOpacity>
+    </>
+  );
+}
+
+const TextBox = (props) => {
+  return (
+    <TextInput
+      defaultValue={props.defaultValue}
+      style={styles.textInput}
+      {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
+      editable
+      maxLength={20}
+    />
+  );
+};
 
 const SignUpScreen: () => React$Node = () => {
+  const [value, onChangeText] = React.useState('');
   return (
     <SafeAreaView>
-      <Text>Jessica Signup</Text>
+      <TextBox
+        defaultValue={'First Name'}
+        multiline
+        numberOfLines={1}
+        onChangeText={(text) => onChangeText(text)}
+        // value={value}
+      />
+      <TextBox
+        defaultValue={'Last Name'}
+        multiline
+        numberOfLines={1}
+        onChangeText={(text) => onChangeText(text)}
+        // value={value}
+      />
+      <TextBox
+        defaultValue={'Email'}
+        multiline
+        numberOfLines={1}
+        onChangeText={(text) => onChangeText(text)}
+        // value={value}
+      />
+      <TextBox
+        defaultValue={'Password'}
+        multiline
+        numberOfLines={1}
+        onChangeText={(text) => onChangeText(text)}
+        // value={value}
+      />
+      <TextBox
+        defaultValue={'Confirm Password'}
+        multiline
+        numberOfLines={1}
+        onChangeText={(text) => onChangeText(text)}
+        // value={value}
+      />
+      <SignUpButton
+        css={styles.button}
+        text={'Create Account'}
+        accessibilityLabel={'Create Account Button'}
+        onPress={() => {
+          console.log('TODO SOMETHING');
+        }}
+      />
     </SafeAreaView>
   );
 };
