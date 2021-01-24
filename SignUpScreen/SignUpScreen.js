@@ -65,6 +65,7 @@ const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
   return (
     <SafeAreaView style={styles.container}>
+      <Image style={styles.TopWave} source={require('./images/TopWave.png')} />
       <View style={styles.signupContainer}>
         <Text style={styles.title}>Create an account</Text>
         <TextBox

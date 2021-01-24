@@ -44,5 +44,12 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
+  TopWave: {
+    position: 'absolute',
+    width: 416.5,
+    height: 351,
+    left: 0,
+    top: 0,
+  },
 });
 export default styles;
