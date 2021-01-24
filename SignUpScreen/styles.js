@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
     //Setting font type works different
     // fontFamily: 'Poppins',
     fontSize: 20,
+    flex: 1,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 34,
+    color: colors.blue,
   },
   textInput: {
     borderBottomColor: '#000000',
