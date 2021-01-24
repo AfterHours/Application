@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     // fontFamily: 'Poppins',
     fontSize: 20,
     flex: 1,
-    alignItems: 'center',
   },
   title: {
     fontSize: 34,
