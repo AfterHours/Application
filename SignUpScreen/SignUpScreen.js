@@ -65,7 +65,7 @@ const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
   return (
     <SafeAreaView style={styles.container}>
-      <Image style={styles.TopWave} source={require('./images/TopWave.png')} />
+      <Image style={styles.TopWave} source={require('./images/Top.svg')} />
       <View style={styles.signupContainer}>
         <Text style={styles.title}>Create an account</Text>
         <TextBox
@@ -115,7 +115,7 @@ const SignUpScreen: () => React$Node = () => {
       {/* TODO Wave picture needs to get figured out*/}
       <Image
         style={styles.bottomWave}
-        source={require('./images/bottomWave.png')}
+        source={require('./images/Bottom.svg')}
       />
     </SafeAreaView>
   );
