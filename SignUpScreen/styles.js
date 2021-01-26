@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
   bottomWave: {
     position: 'absolute',
     width: 265.5,
-    height: 112,
     right: 0,
     bottom: 0,
   },

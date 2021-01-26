@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   loginContainer: {
     alignSelf: 'flex-end',
-    width: 135,
+    marginRight: '5%',
   },
   loginText: {
     fontSize: 30,
