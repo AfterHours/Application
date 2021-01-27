@@ -17,7 +17,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import TextField from 'rn-md-textinput';
+import {TextField} from 'rn-material-ui-textfield';
 import styles from './styles';
 
 function SignUpButton(props: {
@@ -45,18 +45,24 @@ function SignUpButton(props: {
 
 const TextBox = (props) => {
   return (
-    // <TextField
-    //   label={props.label}
-    //   keyboardType={props.keyboardType}
-    //   secureTextEntry={props.secureTextEntry}
-    //   // formatText={this.formatText}
-    //   // onSubmitEditing={this.onSubmit}
-    //   // ref={this.fieldRef}
-    // />
-    // <Text>Hi</Text>
-    <ScrollView>
-      <TextField label={'Name'} highlightColor={'#00BCD4'} />
-    </ScrollView>
+    <TextField
+      label={props.label}
+      keyboardType={props.keyboardType}
+      secureTextEntry={props.secureTextEntry}
+      // formatText={this.formatText}
+      // onSubmitEditing={this.onSubmit}
+      // ref={this.fieldRef}
+    />
+    // <ScrollView>
+    //   <TextField
+    //     label={props.label}
+    //     keyboardType={props.keyboardType}
+    //     secureTextEntry={props.secureTextEntry}
+    //     // formatText={this.formatText}
+    //     // onSubmitEditing={this.onSubmit}
+    //     // ref={this.fieldRef}
+    //   />
+    // </ScrollView>
   );
 };
 
