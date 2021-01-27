@@ -20,15 +20,6 @@ import styles from './styles';
  * @flow strict-local
  */
 
-//Default react native imports
-// import {
-//   Header,
-//   LearnMoreLinks,
-//   Colors,
-//   DebugInstructions,
-//   ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
-
 function SignUpButton(props: {
   css: Object,
   text: string,

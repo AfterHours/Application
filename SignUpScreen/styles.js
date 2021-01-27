@@ -3,37 +3,32 @@ import colors from '../colorScheme';
 
 const styles = StyleSheet.create({
   container: {
-    //Setting font type works different
-    // fontFamily: 'Poppins',
-    fontSize: 20,
     flex: 1,
+    justifyContent: 'space-evenly',
     alignItems: 'center',
-    backgroundColor: colors.white,
   },
-  signupContainer: {
-    flex: 1,
-    width: 135,
-    alignItems: 'center',
-    // justifyContent: 'flex-end',
+  titleContainer: {
+    alignSelf: 'flex-end',
   },
   title: {
+    fontFamily: 'Poppins-SemiBold',
     fontSize: 34,
+    lineHeight: 51,
     color: colors.blue,
   },
-  textInput: {
-    borderBottomColor: '#000000',
-    borderBottomWidth: 1,
+  buttonContainer: {
+    marginTop: '10%',
   },
   button: {
-    backgroundColor: colors.blue,
-    color: colors.white,
-    padding: 15,
-    margin: 10,
     width: 343,
     height: 44,
     borderRadius: 15,
+    backgroundColor: colors.blue,
+    justifyContent: 'center',
   },
   buttonText: {
+    fontSize: 20,
+    lineHeight: 30,
     color: colors.white,
     textAlign: 'center',
   },

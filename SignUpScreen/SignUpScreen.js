@@ -2,30 +2,17 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
+ * https://github.com/n4kz/react-native-material-textfield
+ * https://github.com/n4kz/react-native-material-textfield/issues/249#issuecomment-610895464
  * @format
  * @flow strict-local
  */
 
 import React from 'react';
-import {
-  Image,
-  SafeAreaView,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-
+import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import {TextField} from 'react-native-material-textfield';
 import styles from './styles';
 
-//Default react native imports
-// import {
-//   Header,
-//   LearnMoreLinks,
-//   Colors,
-//   DebugInstructions,
-//   ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
 function SignUpButton(props: {
   css: Object,
   text: string,
@@ -51,12 +38,13 @@ function SignUpButton(props: {
 
 const TextBox = (props) => {
   return (
-    <TextInput
-      defaultValue={props.defaultValue}
-      style={styles.textInput}
-      {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
-      editable
-      maxLength={20}
+    <TextField
+      label={props.label}
+      keyboardType={props.keyboardType}
+      secureTextEntry={props.secureTextEntry}
+      formatText={this.formatText}
+      onSubmitEditing={this.onSubmit}
+      ref={this.fieldRef}
     />
   );
 };
@@ -66,51 +54,53 @@ const SignUpScreen: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
-      <View style={styles.signupContainer}>
-        <Text style={styles.title}>Create an account</Text>
+      <View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Create an</Text>
+          <Text style={styles.title}>account</Text>
+        </View>
         <TextBox
-          defaultValue={'First Name'}
-          multiline
-          numberOfLines={1}
+          label={'First Name'}
+          keyboardType={'default'}
           onChangeText={(text) => onChangeText(text)}
           // value={value}
         />
         <TextBox
-          defaultValue={'Last Name'}
-          multiline
-          numberOfLines={1}
+          label={'Last Name'}
+          keyboardType={'default'}
           onChangeText={(text) => onChangeText(text)}
           // value={value}
         />
         <TextBox
-          defaultValue={'Email'}
-          multiline
-          numberOfLines={1}
+          label={'Email'}
+          keyboardType={'email-address'}
           onChangeText={(text) => onChangeText(text)}
           // value={value}
         />
         <TextBox
-          defaultValue={'Password'}
-          multiline
-          numberOfLines={1}
+          label={'Password'}
+          keyboardType={'default'}
+          secureTextEntry={true}
           onChangeText={(text) => onChangeText(text)}
           // value={value}
         />
         <TextBox
-          defaultValue={'Confirm Password'}
-          multiline
-          numberOfLines={1}
+          label={'Confirm Password'}
+          keyboardType={'default'}
+          secureTextEntry={true}
           onChangeText={(text) => onChangeText(text)}
           // value={value}
         />
-        <SignUpButton
-          css={styles.button}
-          text={'Create Account'}
-          accessibilityLabel={'Create Account Button'}
-          onPress={() => {
-            console.log('TODO SOMETHING');
-          }}
-        />
+        <View style={styles.buttonContainer}>
+          <SignUpButton
+            css={styles.button}
+            text={'Create Account'}
+            accessibilityLabel={'Create Account Button'}
+            onPress={() => {
+              console.log('TODO SOMETHING');
+            }}
+          />
+        </View>
       </View>
       {/* TODO Wave picture needs to get figured out*/}
       <Image
