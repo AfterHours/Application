@@ -5,7 +5,7 @@
     <platform value="ANDROID" />
     <envs />
     <only-packager />
-    <browser value="5c76c980-9186-435d-9362-18b0697588e4" />
+    <browser value="dc1290f9-96bc-4456-bfed-5f40d4a7610f" />
     <method v="2">
       <option name="ReactNativePackager" enabled="true" />
     </method>
