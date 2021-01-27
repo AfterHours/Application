@@ -10,7 +10,7 @@
 
 import React from 'react';
 import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {TextField} from 'react-native-material-textfield';
+import TextField from 'rn-md-textinput';
 import styles from './styles';
 
 function SignUpButton(props: {
@@ -42,10 +42,11 @@ const TextBox = (props) => {
       label={props.label}
       keyboardType={props.keyboardType}
       secureTextEntry={props.secureTextEntry}
-      formatText={this.formatText}
-      onSubmitEditing={this.onSubmit}
-      ref={this.fieldRef}
+      // formatText={this.formatText}
+      // onSubmitEditing={this.onSubmit}
+      // ref={this.fieldRef}
     />
+    // <Text>Hi</Text>
   );
 };
 
