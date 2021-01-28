@@ -66,9 +66,14 @@ const TextBox = (props) => {
 
 const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
-  // const [secure, setSecure] = React.useState(true);
+
   return (
-    <SafeAreaView style={styles.container}>
+    // <SafeAreaView style={styles.container}>
+    <KeyboardAwareScrollView
+      style={{backgroundColor: '#fff'}}
+      resetScrollToCoords={{x: 0, y: 0}}
+      contentContainerStyle={styles.container}
+      scrollEnabled={false}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
       <View>
         <View style={styles.titleContainer}>
@@ -80,6 +85,7 @@ const SignUpScreen: () => React$Node = () => {
           label={'First Name'}
           keyboardType={'default'}
           onChangeText={(text) => onChangeText(text)}
+
           // value={value}
         />
         <TextBox
@@ -126,7 +132,8 @@ const SignUpScreen: () => React$Node = () => {
         style={styles.bottomWave}
         source={require('./images/Bottom.png')}
       />
-    </SafeAreaView>
+    </KeyboardAwareScrollView>
+    // </SafeAreaView>
   );
 };
 
