@@ -17,23 +17,21 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Poppins-SemiBold',
-    fontSize: hp('5%'),
-    lineHeight: 51,
+    fontSize: hp('4%'),
     color: colors.blue,
   },
   buttonContainer: {
-    marginTop: hp('10%'),
+    marginTop: hp('2%'),
   },
   button: {
     width: wp('70%'),
-    height: wp('12%'),
+    height: hp('6%'),
     borderRadius: 15,
     backgroundColor: colors.blue,
     justifyContent: 'center',
   },
   buttonText: {
-    fontSize: hp('3%'),
-    lineHeight: hp('3%'),
+    fontSize: hp('2.5%'),
     color: colors.white,
     textAlign: 'center',
   },
@@ -41,14 +39,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: wp('70%'),
     right: 0,
-    bottom: 0,
+    bottom: -20,
   },
   TopWave: {
     position: 'absolute',
     width: wp('100%'),
-    height: hp('45%'),
+    height: hp('50%'),
     left: 0,
-    top: 0,
+    top: -40,
   },
 });
 export default styles;
