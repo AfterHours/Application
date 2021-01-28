@@ -17,6 +17,24 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeTests.m */; };
 		37658562A3FAD917CFD365B0 /* libPods-ReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86653860EF41777F786E9494 /* libPods-ReactNative.a */; };
+		C322826925C35A3800CF578A /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3725C0E48E008CC098 /* Poppins-Black.ttf */; };
+		C322826A25C35A3800CF578A /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E2D25C0E48E008CC098 /* Poppins-BlackItalic.ttf */; };
+		C322826B25C35A3800CF578A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3425C0E48E008CC098 /* Poppins-Bold.ttf */; };
+		C322826C25C35A3800CF578A /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3625C0E48E008CC098 /* Poppins-BoldItalic.ttf */; };
+		C322826D25C35A3800CF578A /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E2E25C0E48E008CC098 /* Poppins-ExtraBold.ttf */; };
+		C322826E25C35A3800CF578A /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3E25C0E48E008CC098 /* Poppins-ExtraBoldItalic.ttf */; };
+		C322826F25C35A3800CF578A /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3B25C0E48E008CC098 /* Poppins-ExtraLight.ttf */; };
+		C322827025C35A3800CF578A /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3C25C0E48E008CC098 /* Poppins-ExtraLightItalic.ttf */; };
+		C322827125C35A3800CF578A /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3825C0E48E008CC098 /* Poppins-Italic.ttf */; };
+		C322827225C35A3800CF578A /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3025C0E48E008CC098 /* Poppins-Light.ttf */; };
+		C322827325C35A3800CF578A /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3325C0E48E008CC098 /* Poppins-LightItalic.ttf */; };
+		C322827425C35A3800CF578A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3A25C0E48E008CC098 /* Poppins-Medium.ttf */; };
+		C322827525C35A3800CF578A /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3925C0E48E008CC098 /* Poppins-MediumItalic.ttf */; };
+		C322827625C35A3800CF578A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3525C0E48E008CC098 /* Poppins-Regular.ttf */; };
+		C322827725C35A3800CF578A /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E2F25C0E48E008CC098 /* Poppins-SemiBold.ttf */; };
+		C322827825C35A3800CF578A /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3125C0E48E008CC098 /* Poppins-SemiBoldItalic.ttf */; };
+		C322827925C35A3800CF578A /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3D25C0E48E008CC098 /* Poppins-Thin.ttf */; };
+		C322827A25C35A3800CF578A /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3225C0E48E008CC098 /* Poppins-ThinItalic.ttf */; };
 		C3E40706727F0F08571D23D0 /* libPods-ReactNative-ReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E6BEAB050F7A261C15E784 /* libPods-ReactNative-ReactNativeTests.a */; };
 		E58DFBC76E98BA98A001B57A /* libPods-ReactNative-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E330D0C19D5DD9AD477E48E /* libPods-ReactNative-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -414,6 +432,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C322826925C35A3800CF578A /* Poppins-Black.ttf in Resources */,
+				C322826A25C35A3800CF578A /* Poppins-BlackItalic.ttf in Resources */,
+				C322826B25C35A3800CF578A /* Poppins-Bold.ttf in Resources */,
+				C322826C25C35A3800CF578A /* Poppins-BoldItalic.ttf in Resources */,
+				C322826D25C35A3800CF578A /* Poppins-ExtraBold.ttf in Resources */,
+				C322826E25C35A3800CF578A /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				C322826F25C35A3800CF578A /* Poppins-ExtraLight.ttf in Resources */,
+				C322827025C35A3800CF578A /* Poppins-ExtraLightItalic.ttf in Resources */,
+				C322827125C35A3800CF578A /* Poppins-Italic.ttf in Resources */,
+				C322827225C35A3800CF578A /* Poppins-Light.ttf in Resources */,
+				C322827325C35A3800CF578A /* Poppins-LightItalic.ttf in Resources */,
+				C322827425C35A3800CF578A /* Poppins-Medium.ttf in Resources */,
+				C322827525C35A3800CF578A /* Poppins-MediumItalic.ttf in Resources */,
+				C322827625C35A3800CF578A /* Poppins-Regular.ttf in Resources */,
+				C322827725C35A3800CF578A /* Poppins-SemiBold.ttf in Resources */,
+				C322827825C35A3800CF578A /* Poppins-SemiBoldItalic.ttf in Resources */,
+				C322827925C35A3800CF578A /* Poppins-Thin.ttf in Resources */,
+				C322827A25C35A3800CF578A /* Poppins-ThinItalic.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
