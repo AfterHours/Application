@@ -8,8 +8,8 @@
 
 import React from 'react';
 import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-Icon.loadFont();
+import {Icon} from 'react-native-elements';
+// Icon.loadFont();
 
 import styles from './styles';
 /**
@@ -36,7 +36,12 @@ function SignUpButton(props: {
         <Text
           style={styles.buttonText}
           accessibilityLabel={props.accessibilityLabel}>
-          <Icon name={props.platform} size={20} color="#FFF" />{' '}
+          <Icon
+            name={props.platform}
+            size={20}
+            type="font-awesome-5"
+            color="#FFF"
+          />{' '}
           {'    ' + props.text}
         </Text>
       </TouchableOpacity>

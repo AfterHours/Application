@@ -14,8 +14,8 @@ import {TextField} from '@ubaids/react-native-material-textfield';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import styles from './styles';
-import Icon from 'react-native-vector-icons/FontAwesome';
-Icon.loadFont();
+import {Icon} from 'react-native-elements';
+// Icon.loadFont();
 function SignUpButton(props: {
   css: Object,
   text: string,
