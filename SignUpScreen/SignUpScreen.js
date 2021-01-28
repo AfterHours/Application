@@ -42,88 +42,86 @@ function SignUpButton(props: {
 const TextBox = (props) => {
   const [secure, setSecure] = React.useState(props.secureTextEntry);
   return (
-    <>
+    <View>
       <TextField
+        style={styles.textField}
         label={props.label}
         keyboardType={props.keyboardType}
         secureTextEntry={secure}
       />
       {props.secureTextEntry && (
-        <Icon
-          style={{paddingRight: 15}}
-          name={secure ? 'eye' : 'eye-slash'}
-          type="font-awesome-5"
-          size={20}
-          color="gray"
-          onPress={() => setSecure(!secure)}
-        />
+        <View style={styles.passwordIcon}>
+          <Icon
+            name={secure ? 'eye-slash' : 'eye'}
+            type="font-awesome-5"
+            size={20}
+            color="gray"
+            onPress={() => setSecure(!secure)}
+          />
+        </View>
       )}
-    </>
+    </View>
   );
 };
 
 const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
+  // const [secure, setSecure] = React.useState(true);
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
-      <KeyboardAwareScrollView
-        // style={{backgroundColor: '#4c69a5'}}
-        resetScrollToCoords={{x: 0, y: 0}}
-        contentContainerStyle={styles.container}
-        scrollEnabled={false}>
-        <View>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>Create an</Text>
-            <Text style={styles.title}>account</Text>
-          </View>
-
-          <TextBox
-            label={'First Name'}
-            keyboardType={'default'}
-            onChangeText={(text) => onChangeText(text)}
-            // value={value}
-          />
-          <TextBox
-            label={'Last Name'}
-            keyboardType={'default'}
-            onChangeText={(text) => onChangeText(text)}
-            // value={value}
-          />
-          <TextBox
-            label={'Email'}
-            keyboardType={'email-address'}
-            onChangeText={(text) => onChangeText(text)}
-            // value={value}
-          />
-          <TextBox
-            label={'Password'}
-            keyboardType={'default'}
-            secureTextEntry={true}
-            onChangeText={(text) => onChangeText(text)}
-            // value={value}
-          />
-          <TextBox
-            label={'Confirm Password'}
-            keyboardType={'default'}
-            secureTextEntry={true}
-            onChangeText={(text) => onChangeText(text)}
-            // value={value}
-          />
-
-          <View style={styles.buttonContainer}>
-            <SignUpButton
-              css={styles.button}
-              text={'Create Account'}
-              accessibilityLabel={'Create Account Button'}
-              onPress={() => {
-                console.log('TODO SOMETHING');
-              }}
-            />
-          </View>
+      <View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Create an</Text>
+          <Text style={styles.title}>account</Text>
         </View>
-      </KeyboardAwareScrollView>
-      {/* TODO Wave picture needs to get figured out*/}
+
+        <TextBox
+          label={'First Name'}
+          keyboardType={'default'}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          label={'Last Name'}
+          keyboardType={'default'}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          label={'Email'}
+          keyboardType={'email-address'}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        {/* <View> */}
+        <TextBox
+          style={styles.textBox}
+          label={'Password'}
+          keyboardType={'default'}
+          secureTextEntry={true}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <TextBox
+          style={styles.textBox}
+          label={'Confirm Password'}
+          keyboardType={'default'}
+          secureTextEntry={true}
+          onChangeText={(text) => onChangeText(text)}
+          // value={value}
+        />
+        <View style={styles.buttonContainer}>
+          <SignUpButton
+            css={styles.button}
+            text={'Create Account'}
+            accessibilityLabel={'Create Account Button'}
+            onPress={() => {
+              console.log('TODO SOMETHING');
+            }}
+          />
+        </View>
+      </View>
       <Image
         style={styles.bottomWave}
         source={require('./images/Bottom.png')}

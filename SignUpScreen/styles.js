@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: hp('2%'),
   },
+  passwordIcon: {
+    alignSelf: 'flex-end',
+    top: hp('-4%'),
+  },
   button: {
     width: wp('70%'),
     height: hp('6%'),
