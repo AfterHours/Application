@@ -17,7 +17,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {TextField} from 'rn-material-ui-textfield';
+import {
+  TextField,
+  FilledTextField,
+  OutlinedTextField,
+} from '@ubaids/react-native-material-textfield';
 import styles from './styles';
 
 function SignUpButton(props: {
@@ -49,20 +53,7 @@ const TextBox = (props) => {
       label={props.label}
       keyboardType={props.keyboardType}
       secureTextEntry={props.secureTextEntry}
-      // formatText={this.formatText}
-      // onSubmitEditing={this.onSubmit}
-      // ref={this.fieldRef}
     />
-    // <ScrollView>
-    //   <TextField
-    //     label={props.label}
-    //     keyboardType={props.keyboardType}
-    //     secureTextEntry={props.secureTextEntry}
-    //     // formatText={this.formatText}
-    //     // onSubmitEditing={this.onSubmit}
-    //     // ref={this.fieldRef}
-    //   />
-    // </ScrollView>
   );
 };
 
