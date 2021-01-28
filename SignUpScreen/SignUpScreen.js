@@ -9,15 +9,10 @@
  */
 
 import React from 'react';
-import {
-  Image,
-  KeyboardAvoidingView,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import {TextField} from '@ubaids/react-native-material-textfield';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+
 import styles from './styles';
 
 function SignUpButton(props: {
@@ -58,7 +53,11 @@ const SignUpScreen: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
-      <KeyboardAvoidingView behavior="padding">
+      <KeyboardAwareScrollView
+        // style={{backgroundColor: '#4c69a5'}}
+        resetScrollToCoords={{x: 0, y: 0}}
+        contentContainerStyle={styles.container}
+        scrollEnabled={false}>
         <View>
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Create an</Text>
@@ -109,7 +108,7 @@ const SignUpScreen: () => React$Node = () => {
             />
           </View>
         </View>
-      </KeyboardAvoidingView>
+      </KeyboardAwareScrollView>
       {/* TODO Wave picture needs to get figured out*/}
       <Image
         style={styles.bottomWave}
