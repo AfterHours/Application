@@ -57,8 +57,8 @@ const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
   return (
     <SafeAreaView style={styles.container}>
+      <Image style={styles.TopWave} source={require('./images/Top.png')} />
       <KeyboardAvoidingView behavior="padding">
-        <Image style={styles.TopWave} source={require('./images/Top.png')} />
         <View>
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Create an</Text>
@@ -109,13 +109,12 @@ const SignUpScreen: () => React$Node = () => {
             />
           </View>
         </View>
-
-        {/* TODO Wave picture needs to get figured out*/}
-        <Image
-          style={styles.bottomWave}
-          source={require('./images/Bottom.png')}
-        />
       </KeyboardAvoidingView>
+      {/* TODO Wave picture needs to get figured out*/}
+      <Image
+        style={styles.bottomWave}
+        source={require('./images/Bottom.png')}
+      />
     </SafeAreaView>
   );
 };
