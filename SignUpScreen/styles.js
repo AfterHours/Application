@@ -1,4 +1,9 @@
 import {StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
 import colors from '../colorScheme';
 
 const styles = StyleSheet.create({
@@ -12,38 +17,36 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Poppins-SemiBold',
-    fontSize: 34,
-    lineHeight: 51,
+    fontSize: hp('4%'),
     color: colors.blue,
   },
   buttonContainer: {
-    marginTop: '10%',
+    marginTop: hp('2%'),
   },
   button: {
-    width: 343,
-    height: 44,
+    width: wp('70%'),
+    height: hp('6%'),
     borderRadius: 15,
     backgroundColor: colors.blue,
     justifyContent: 'center',
   },
   buttonText: {
-    fontSize: 20,
-    lineHeight: 30,
+    fontSize: hp('2.5%'),
     color: colors.white,
     textAlign: 'center',
   },
   bottomWave: {
     position: 'absolute',
-    width: 265.5,
+    width: wp('70%'),
     right: 0,
-    bottom: 0,
+    bottom: -20,
   },
   TopWave: {
     position: 'absolute',
-    width: 416.5,
-    height: 351,
+    width: wp('100%'),
+    height: hp('50%'),
     left: 0,
-    top: 0,
+    top: -40,
   },
 });
 export default styles;
