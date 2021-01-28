@@ -13,16 +13,11 @@ import {
   Image,
   KeyboardAvoidingView,
   SafeAreaView,
-  ScrollView,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import {
-  TextField,
-  FilledTextField,
-  OutlinedTextField,
-} from '@ubaids/react-native-material-textfield';
+import {TextField} from '@ubaids/react-native-material-textfield';
 import styles from './styles';
 
 function SignUpButton(props: {
@@ -62,13 +57,14 @@ const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
   return (
     <SafeAreaView style={styles.container}>
-      <Image style={styles.TopWave} source={require('./images/Top.png')} />
-      <View>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>Create an</Text>
-          <Text style={styles.title}>account</Text>
-        </View>
-        <KeyboardAvoidingView behavior="padding">
+      <KeyboardAvoidingView behavior="padding">
+        <Image style={styles.TopWave} source={require('./images/Top.png')} />
+        <View>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>Create an</Text>
+            <Text style={styles.title}>account</Text>
+          </View>
+
           <TextBox
             label={'First Name'}
             keyboardType={'default'}
@@ -101,24 +97,25 @@ const SignUpScreen: () => React$Node = () => {
             onChangeText={(text) => onChangeText(text)}
             // value={value}
           />
-        </KeyboardAvoidingView>
-        <View style={styles.buttonContainer}>
-          <SignUpButton
-            css={styles.button}
-            text={'Create Account'}
-            accessibilityLabel={'Create Account Button'}
-            onPress={() => {
-              console.log('TODO SOMETHING');
-            }}
-          />
-        </View>
-      </View>
 
-      {/* TODO Wave picture needs to get figured out*/}
-      <Image
-        style={styles.bottomWave}
-        source={require('./images/Bottom.png')}
-      />
+          <View style={styles.buttonContainer}>
+            <SignUpButton
+              css={styles.button}
+              text={'Create Account'}
+              accessibilityLabel={'Create Account Button'}
+              onPress={() => {
+                console.log('TODO SOMETHING');
+              }}
+            />
+          </View>
+        </View>
+
+        {/* TODO Wave picture needs to get figured out*/}
+        <Image
+          style={styles.bottomWave}
+          source={require('./images/Bottom.png')}
+        />
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
