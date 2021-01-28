@@ -63,12 +63,12 @@ const SignUpScreen: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
-      <KeyboardAvoidingView behavior="padding">
-        <View>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>Create an</Text>
-            <Text style={styles.title}>account</Text>
-          </View>
+      <View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Create an</Text>
+          <Text style={styles.title}>account</Text>
+        </View>
+        <KeyboardAvoidingView behavior="padding">
           <TextBox
             label={'First Name'}
             keyboardType={'default'}
@@ -101,18 +101,18 @@ const SignUpScreen: () => React$Node = () => {
             onChangeText={(text) => onChangeText(text)}
             // value={value}
           />
-          <View style={styles.buttonContainer}>
-            <SignUpButton
-              css={styles.button}
-              text={'Create Account'}
-              accessibilityLabel={'Create Account Button'}
-              onPress={() => {
-                console.log('TODO SOMETHING');
-              }}
-            />
-          </View>
+        </KeyboardAvoidingView>
+        <View style={styles.buttonContainer}>
+          <SignUpButton
+            css={styles.button}
+            text={'Create Account'}
+            accessibilityLabel={'Create Account Button'}
+            onPress={() => {
+              console.log('TODO SOMETHING');
+            }}
+          />
         </View>
-      </KeyboardAvoidingView>
+      </View>
 
       {/* TODO Wave picture needs to get figured out*/}
       <Image
