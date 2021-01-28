@@ -73,6 +73,7 @@ const SignUpScreen: () => React$Node = () => {
       style={{backgroundColor: '#fff'}}
       resetScrollToCoords={{x: 0, y: 0}}
       contentContainerStyle={styles.container}
+      extraHeight={200}
       scrollEnabled={false}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
       <View>
