@@ -14,7 +14,8 @@ import {TextField} from '@ubaids/react-native-material-textfield';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import styles from './styles';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
+Icon.loadFont();
 function SignUpButton(props: {
   css: Object,
   text: string,
@@ -39,12 +40,25 @@ function SignUpButton(props: {
 }
 
 const TextBox = (props) => {
+  const [secure, setSecure] = React.useState(props.secureTextEntry);
   return (
-    <TextField
-      label={props.label}
-      keyboardType={props.keyboardType}
-      secureTextEntry={props.secureTextEntry}
-    />
+    <>
+      <TextField
+        label={props.label}
+        keyboardType={props.keyboardType}
+        secureTextEntry={secure}
+      />
+      {props.secureTextEntry && (
+        <Icon
+          style={{paddingRight: 15}}
+          name={secure ? 'eye' : 'eye-slash'}
+          type="font-awesome-5"
+          size={20}
+          color="gray"
+          onPress={() => setSecure(!secure)}
+        />
+      )}
+    </>
   );
 };
 
