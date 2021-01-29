@@ -13,8 +13,8 @@ import SignUpScreen from './SignUpScreen/SignUpScreen';
 
 const App: () => React$Node = () => {
   return (
-    // <LandingScreen />
-    <SignUpScreen />
+    <LandingScreen />
+    // <SignUpScreen />
   );
 };
 

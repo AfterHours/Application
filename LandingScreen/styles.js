@@ -1,4 +1,9 @@
 import {Platform, StatusBar, StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
 import colors from '../colorScheme';
 
 const styles = StyleSheet.create({
@@ -11,11 +16,13 @@ const styles = StyleSheet.create({
   },
   loginContainer: {
     alignSelf: 'flex-end',
-    marginRight: '5%',
+    marginRight: wp('5%'),
   },
   loginText: {
-    fontSize: 30,
-    marginRight: 30,
+    fontSize: hp('4%'),
+    // fontSize: 30,
+    // marginRight: 30,
+    marginRight: wp('7%'),
     fontWeight: 'bold',
     color: '#012e67',
   },
@@ -29,20 +36,26 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   dividerText: {
-    width: 50,
-    fontSize: 27,
+    // width: 50,
+    width: wp('13%'),
+    // fontSize: 27,
+    fontSize: hp('4%'),
     textAlign: 'center',
   },
   buttonText: {
-    fontSize: 20,
+    // fontSize: 20,
+    fontSize: hp('3%'),
     color: colors.white,
     textAlign: 'center',
   },
   buttonStyles: {
     textAlign: 'center',
-    padding: 15,
-    margin: 10,
-    width: 300,
+    // padding: 15,
+    padding: wp('4%'),
+    // margin: 10,
+    margin: wp('3%'),
+    // width: 300,
+    width: wp('76%'),
     borderRadius: 15,
   },
   buttonFacebook: {
@@ -53,7 +66,8 @@ const styles = StyleSheet.create({
   },
   buttonEmail: {
     backgroundColor: 'rgba(0, 0, 0, 0.70)',
-    marginBottom: 60,
+    // marginBottom: 60,
+    marginBottom: hp('8%'),
   },
 });
 export default styles;
