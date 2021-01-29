@@ -36,13 +36,14 @@ function SignUpButton(props: {
         <Text
           style={styles.buttonText}
           accessibilityLabel={props.accessibilityLabel}>
+          {' '}
           <Icon
             name={props.platform}
             size={20}
             type="font-awesome-5"
             color="#FFF"
-          />{' '}
-          {'    ' + props.text}
+          />
+          {'   ' + props.text}
         </Text>
       </TouchableOpacity>
     </>

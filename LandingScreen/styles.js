@@ -11,20 +11,18 @@ const styles = StyleSheet.create({
     //MarginTop needed for ios, for text not to be next to notch
     // marginTop: Platform.OS === 'android' ? StatusBar.height : 0,
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   loginContainer: {
     alignSelf: 'flex-end',
     marginRight: wp('5%'),
   },
   loginText: {
-    fontSize: hp('4%'),
-    // fontSize: 30,
-    // marginRight: 30,
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: hp('3%'),
     marginRight: wp('7%'),
-    fontWeight: 'bold',
-    color: '#012e67',
+    color: colors.blue,
   },
   row: {
     flexDirection: 'row',
@@ -33,30 +31,26 @@ const styles = StyleSheet.create({
   dividerLine: {
     flex: 1,
     height: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'grey',
   },
   dividerText: {
-    // width: 50,
     width: wp('13%'),
-    // fontSize: 27,
-    fontSize: hp('4%'),
+    fontSize: hp('2.5%'),
     textAlign: 'center',
-  },
-  buttonText: {
-    // fontSize: 20,
-    fontSize: hp('3%'),
-    color: colors.white,
-    textAlign: 'center',
+    color: 'grey',
   },
   buttonStyles: {
-    textAlign: 'center',
-    // padding: 15,
-    padding: wp('4%'),
-    // margin: 10,
+    justifyContent: 'center',
+    height: hp('6%'),
     margin: wp('3%'),
-    // width: 300,
-    width: wp('76%'),
+    width: wp('70%'),
     borderRadius: 15,
+  },
+  buttonText: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: hp('2%'),
+    color: colors.white,
+    textAlign: 'center',
   },
   buttonFacebook: {
     backgroundColor: '#4267B2',
@@ -66,7 +60,6 @@ const styles = StyleSheet.create({
   },
   buttonEmail: {
     backgroundColor: 'rgba(0, 0, 0, 0.70)',
-    // marginBottom: 60,
     marginBottom: hp('8%'),
   },
 });
