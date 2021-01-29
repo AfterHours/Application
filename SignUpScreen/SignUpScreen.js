@@ -9,21 +9,13 @@
  */
 
 import React from 'react';
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import {
-  TextField,
-  FilledTextField,
-  OutlinedTextField,
-} from '@ubaids/react-native-material-textfield';
-import styles from './styles';
+import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import {TextField} from '@ubaids/react-native-material-textfield';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
+import styles from './styles';
+import {Icon} from 'react-native-elements';
+// Icon.loadFont();
 function SignUpButton(props: {
   css: Object,
   text: string,
@@ -48,29 +40,54 @@ function SignUpButton(props: {
 }
 
 const TextBox = (props) => {
+  const [secure, setSecure] = React.useState(props.secureTextEntry);
   return (
-    <TextField
-      label={props.label}
-      keyboardType={props.keyboardType}
-      secureTextEntry={props.secureTextEntry}
-    />
+    <View>
+      <TextField
+        style={styles.textField}
+        label={props.label}
+        keyboardType={props.keyboardType}
+        secureTextEntry={secure}
+      />
+      {props.secureTextEntry && (
+        <View style={styles.passwordIcon}>
+          <Icon
+            name={secure ? 'eye-slash' : 'eye'}
+            type="font-awesome-5"
+            size={20}
+            color="gray"
+            onPress={() => setSecure(!secure)}
+          />
+        </View>
+      )}
+    </View>
   );
 };
 
 const SignUpScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
+
   return (
-    <SafeAreaView style={styles.container}>
+    // <SafeAreaView style={styles.container}>
+    <KeyboardAwareScrollView
+      style={{backgroundColor: '#fff'}}
+      resetScrollToCoords={{x: 0, y: 0}}
+      contentContainerStyle={styles.container}
+      extraHeight={150}
+      extraScrollHeight={20}
+      scrollEnabled={false}>
       <Image style={styles.TopWave} source={require('./images/Top.png')} />
       <View>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Create an</Text>
           <Text style={styles.title}>account</Text>
         </View>
+
         <TextBox
           label={'First Name'}
           keyboardType={'default'}
           onChangeText={(text) => onChangeText(text)}
+
           // value={value}
         />
         <TextBox
@@ -85,7 +102,9 @@ const SignUpScreen: () => React$Node = () => {
           onChangeText={(text) => onChangeText(text)}
           // value={value}
         />
+        {/* <View> */}
         <TextBox
+          style={styles.textBox}
           label={'Password'}
           keyboardType={'default'}
           secureTextEntry={true}
@@ -93,6 +112,7 @@ const SignUpScreen: () => React$Node = () => {
           // value={value}
         />
         <TextBox
+          style={styles.textBox}
           label={'Confirm Password'}
           keyboardType={'default'}
           secureTextEntry={true}
@@ -110,12 +130,12 @@ const SignUpScreen: () => React$Node = () => {
           />
         </View>
       </View>
-      {/* TODO Wave picture needs to get figured out*/}
       <Image
         style={styles.bottomWave}
         source={require('./images/Bottom.png')}
       />
-    </SafeAreaView>
+    </KeyboardAwareScrollView>
+    // </SafeAreaView>
   );
 };
 
