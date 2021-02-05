@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "37657935947",
+    "project_id": "afterhoursreactnative",
+    "storage_bucket": "afterhoursreactnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37657935947:android:7ee495370d30f457a7cdce",
+        "android_client_info": {
+          "package_name": "com.reactnative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37657935947-bifdga6pvtfp628sklqte1t9hede1g2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5QShoS3P2bdX8cphbIWs2ZcScZlI3Q20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37657935947-bifdga6pvtfp628sklqte1t9hede1g2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
