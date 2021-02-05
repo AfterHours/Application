@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-firebase/app": "^10.6.3",
     "@ubaids/react-native-material-textfield": "^0.16.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "expo": "^40.0.0",
