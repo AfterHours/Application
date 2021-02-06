@@ -26,7 +26,14 @@ static void InitializeFlipper(UIApplication *application) {
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Add me --- \/
+    if ([FIRApp defaultApp] == nil) {
+      [FIRApp configure];
+    }
+    // Add me --- /\
+    // ...
+  }
 {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
