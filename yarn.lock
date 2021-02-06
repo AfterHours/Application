@@ -2140,10 +2140,15 @@
   "resolved" "https://registry.npmjs.org/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz"
   "version" "1.1.0"
 
-"@react-native-firebase/app@^10.6.3":
-  "integrity" "sha512-lSuAkdjvqJeBYkJ6idnlnsDuUYpHJTs2LiWOd7m58w+eNwn+wfkjE5UITxjNfIlnIEabWVSHOrkLBv1gPs2BXA=="
-  "resolved" "https://registry.npmjs.org/@react-native-firebase/app/-/app-10.6.3.tgz"
-  "version" "10.6.3"
+"@react-native-firebase/analytics@^10.6.4":
+  "integrity" "sha512-VEDJLIDHum9cKAAVwGt46l+FS0goCUR1AXtgYALfwp+vNTGra4sMwmzba2/ujpyxy/JJla9e2I22DC6ZFbh4qA=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/analytics/-/analytics-10.6.4.tgz"
+  "version" "10.6.4"
+
+"@react-native-firebase/app@^10.6.3", "@react-native-firebase/app@10.6.4":
+  "integrity" "sha512-DIigHYpYwuVQFOlD5qrYoGvKdGgbXR0rFdjpKYd81HI/3OCcferPSOlNorAHncQmEpkZnOl0B2zig4ydCOZjmw=="
+  "resolved" "https://registry.npmjs.org/@react-native-firebase/app/-/app-10.6.4.tgz"
+  "version" "10.6.4"
   dependencies:
     "opencollective-postinstall" "^2.0.1"
     "superstruct" "^0.6.2"
