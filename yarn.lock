@@ -2317,7 +2317,7 @@
 
 "@react-native-firebase/analytics@^10.6.4":
   version "10.6.4"
-  resolved "https://registry.npmjs.org/@react-native-firebase/analytics/-/analytics-10.6.4.tgz"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-10.6.4.tgz#6b1c52c46faa61e4e374bac1fa413e5b7f60b673"
   integrity sha512-VEDJLIDHum9cKAAVwGt46l+FS0goCUR1AXtgYALfwp+vNTGra4sMwmzba2/ujpyxy/JJla9e2I22DC6ZFbh4qA==
 
 "@react-native-firebase/app@^10.6.3":
@@ -2327,6 +2327,11 @@
   dependencies:
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
+
+"@react-native-firebase/auth@^10.6.4":
+  version "10.6.4"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-10.6.4.tgz#0356b93d01194d21d005723a056bcd8cf758ba59"
+  integrity sha512-LYgG9JIGRwtOBrC2CMa5kI/vkhR6xZ1js9BCfG6ZQz23/VJhhDNz7DqxXX9OK4Jv1PHHkNtw0/b1dzqh7jswiQ==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.2"

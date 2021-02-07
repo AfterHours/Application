@@ -9,6 +9,7 @@
 import React from 'react';
 import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
+import analytics from '@react-native-firebase/analytics';
 // Icon.loadFont();
 
 import styles from './styles';
@@ -70,8 +71,11 @@ const LandingScreen: () => React$Node = () => {
           type="font-awesome-5"
           accessibilityLabel="Sign up with Facebook button"
           css={styles.buttonFacebook}
-          onPress={() => {
+          onPress={async () => {
             console.log('FB Button pressed');
+            await analytics().logEvent('FB_Button_pressed', {
+              description: 'User clicked on signup with facebook button',
+            });
           }}
         />
         <SignUpButton
