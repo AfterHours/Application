@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-native-firebase/analytics": "^10.6.4",
-    "@react-native-firebase/app": "^10.6.4",
+    "@react-native-firebase/app": "^10.6.3",
     "@ubaids/react-native-material-textfield": "^0.16.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "expo": "^40.0.0",
@@ -25,10 +25,10 @@
     "react-native-vector-icons": "^8.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/runtime": "^7.8.4",
+    "@babel/core": "^7.12.13",
+    "@babel/runtime": "^7.12.13",
     "@react-native-community/eslint-config": "^1.1.0",
-    "@types/react-native": "^0.63.45",
+    "@types/react-native": "^0.63.48",
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
