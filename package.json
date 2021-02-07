@@ -10,12 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-<<<<<<< HEAD
     "@react-native-firebase/analytics": "^10.6.4",
-    "@react-native-firebase/app": "^10.6.3",
-=======
     "@react-native-firebase/app": "^10.6.4",
->>>>>>> main
     "@ubaids/react-native-material-textfield": "^0.16.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "expo": "^40.0.0",
