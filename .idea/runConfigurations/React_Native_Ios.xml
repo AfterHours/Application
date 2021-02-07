@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Unnamed" type="ReactNative" factoryName="React Native" nameIsGenerated="true">
+  <configuration default="false" name="React Native Ios" type="ReactNative" factoryName="React Native">
     <node-interpreter value="project" />
     <react-native value="$PROJECT_DIR$/node_modules/react-native" />
-    <platform value="ANDROID" />
+    <platform value="IOS" />
     <envs />
     <only-packager />
-    <browser value="dc1290f9-96bc-4456-bfed-5f40d4a7610f" />
+    <browser value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
     <method v="2">
       <option name="ReactNativePackager" enabled="true" />
     </method>
