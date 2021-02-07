@@ -8,6 +8,7 @@
 
 import React from 'react';
 import firebase from '@react-native-firebase/app';
+import auth from '@react-native-firebase/auth';
 
 import LandingScreen from './LandingScreen/LandingScreen';
 import SignUpScreen from './SignUpScreen/SignUpScreen';
