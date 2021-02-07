@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>37657935947-nfvqmpk1nor4o636q5o0vfmqj0ti20ep.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.37657935947-nfvqmpk1nor4o636q5o0vfmqj0ti20ep</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0VEzesOTaz4rmTa9RKtEmczr9808PIS8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>37657935947</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.ReactNative</string>
+	<key>PROJECT_ID</key>
+	<string>afterhoursreactnative</string>
+	<key>STORAGE_BUCKET</key>
+	<string>afterhoursreactnative.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:37657935947:ios:b8873bb2c575270ea7cdce</string>
+</dict>
+</plist>
