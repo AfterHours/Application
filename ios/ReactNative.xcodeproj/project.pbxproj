@@ -17,7 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeTests.m */; };
 		37658562A3FAD917CFD365B0 /* libPods-ReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86653860EF41777F786E9494 /* libPods-ReactNative.a */; };
-		76CA1D8925CF867B002E8CC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76CA1D8825CF867B002E8CC9 /* GoogleService-Info.plist */; };
+		76914A1625D5F63500291B08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76914A1525D5F63500291B08 /* GoogleService-Info.plist */; };
 		C322826925C35A3800CF578A /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3725C0E48E008CC098 /* Poppins-Black.ttf */; };
 		C322826A25C35A3800CF578A /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E2D25C0E48E008CC098 /* Poppins-BlackItalic.ttf */; };
 		C322826B25C35A3800CF578A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76834E3425C0E48E008CC098 /* Poppins-Bold.ttf */; };
@@ -101,7 +101,7 @@
 		76834E3C25C0E48E008CC098 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLightItalic.ttf"; path = "../assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		76834E3D25C0E48E008CC098 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		76834E3E25C0E48E008CC098 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBoldItalic.ttf"; path = "../assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		76CA1D8825CF867B002E8CC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76914A1525D5F63500291B08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8123B1AFE0DF4D04AE98EF9D /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85AEA267A1B82A2A1FFD8690 /* Pods-ReactNative-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNative-tvOSTests/Pods-ReactNative-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				76CA1D8825CF867B002E8CC9 /* GoogleService-Info.plist */,
+				76914A1525D5F63500291B08 /* GoogleService-Info.plist */,
 				76834E3725C0E48E008CC098 /* Poppins-Black.ttf */,
 				76834E2D25C0E48E008CC098 /* Poppins-BlackItalic.ttf */,
 				76834E3425C0E48E008CC098 /* Poppins-Bold.ttf */,
@@ -453,7 +453,7 @@
 				C322827725C35A3800CF578A /* Poppins-SemiBold.ttf in Resources */,
 				C322827825C35A3800CF578A /* Poppins-SemiBoldItalic.ttf in Resources */,
 				C322827925C35A3800CF578A /* Poppins-Thin.ttf in Resources */,
-				76CA1D8925CF867B002E8CC9 /* GoogleService-Info.plist in Resources */,
+				76914A1625D5F63500291B08 /* GoogleService-Info.plist in Resources */,
 				C322827A25C35A3800CF578A /* Poppins-ThinItalic.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
