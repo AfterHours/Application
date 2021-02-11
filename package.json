@@ -17,6 +17,7 @@
     "@react-navigation/native": "^5.9.2",
     "@react-navigation/stack": "^5.14.2",
     "@ubaids/react-native-material-textfield": "^0.16.3",
+    "babel-plugin-module-resolver": "^4.1.0",
     "expo": "^40.0.0",
     "firebase": "^8.2.6",
     "react": "16.13.1",
