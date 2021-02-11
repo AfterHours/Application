@@ -51,7 +51,7 @@ function SignUpButton(props: {
   );
 }
 
-const LandingScreen: () => React$Node = () => {
+const LandingScreen: () => React$Node = ({navigation}) => {
   // console.log('React native debugging');
   function getLog() {
     console.log('Text pressed');
@@ -105,6 +105,7 @@ const LandingScreen: () => React$Node = () => {
           css={styles.buttonEmail}
           onPress={() => {
             console.log('Email Button pressed');
+            navigation.push('SignUpEmail');
           }}
         />
       </View>
