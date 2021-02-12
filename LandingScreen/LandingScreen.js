@@ -7,7 +7,14 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  Text,
+  Alert,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
 import {Icon} from 'react-native-elements';
 import analytics from '@react-native-firebase/analytics';
 import auth from '@react-native-firebase/auth';
@@ -140,6 +147,10 @@ const LandingScreen: () => React$Node = ({navigation}) => {
           }}
         />
       </View>
+      <Image
+        style={styles.bottomWave}
+        source={require('../images/LandingBottom.png')}
+      />
     </SafeAreaView>
   );
 };
