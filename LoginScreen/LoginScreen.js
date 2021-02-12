@@ -16,31 +16,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from '../styles/email';
 import {Icon} from 'react-native-elements';
 import Button from '../components/Button';
-
-const TextBox = (props) => {
-  const [secure, setSecure] = React.useState(props.secureTextEntry);
-  return (
-    <View>
-      <TextField
-        style={styles.textField}
-        label={props.label}
-        keyboardType={props.keyboardType}
-        secureTextEntry={secure}
-      />
-      {props.secureTextEntry && (
-        <View style={styles.passwordIcon}>
-          <Icon
-            name={secure ? 'eye-slash' : 'eye'}
-            type="font-awesome-5"
-            size={20}
-            color="gray"
-            onPress={() => setSecure(!secure)}
-          />
-        </View>
-      )}
-    </View>
-  );
-};
+import TextBox from '../components/TextBox';
 
 const LoginScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
