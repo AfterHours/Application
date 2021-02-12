@@ -13,7 +13,7 @@ import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import {TextField} from '@ubaids/react-native-material-textfield';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
-import styles from './styles';
+import styles from '../styles/email';
 import {Icon} from 'react-native-elements';
 
 function SignUpButton(props: {
@@ -68,7 +68,7 @@ const LoginScreen: () => React$Node = () => {
   const [value, onChangeText] = React.useState('');
 
   return (
-    // <SafeAreaView style={styles.container}>
+    // <SafeAreaView style={email.container}>
     <KeyboardAwareScrollView
       style={{backgroundColor: '#fff'}}
       resetScrollToCoords={{x: 0, y: 0}}
