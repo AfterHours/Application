@@ -6,7 +6,7 @@ import {
 
 import colors from '../colorScheme';
 
-const styles = StyleSheet.create({
+const email = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'space-evenly',
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
     top: -40,
   },
 });
-export default styles;
+export default email;
