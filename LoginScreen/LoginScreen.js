@@ -18,7 +18,7 @@ import {Icon} from 'react-native-elements';
 import Button from '../components/Button';
 import TextBox from '../components/TextBox';
 
-const LoginScreen: () => React$Node = () => {
+const LoginScreen: () => React$Node = ({navigation}) => {
   const [value, onChangeText] = React.useState('');
 
   return (
@@ -58,6 +58,8 @@ const LoginScreen: () => React$Node = () => {
             accessibilityLabel={'Login Button'}
             onPress={() => {
               console.log('TODO SOMETHING');
+              //TODO add some logic here
+              navigation.push('ForYou');
             }}
           />
         </View>
