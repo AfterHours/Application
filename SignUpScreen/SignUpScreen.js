@@ -76,7 +76,7 @@ const SignUpScreen: () => React$Node = () => {
       extraHeight={150}
       extraScrollHeight={20}
       scrollEnabled={false}>
-      <Image style={styles.TopWave} source={require('./images/Top.png')} />
+      <Image style={styles.TopWave} source={require('../images/Top.png')} />
       <View>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Create an</Text>
@@ -132,7 +132,7 @@ const SignUpScreen: () => React$Node = () => {
       </View>
       <Image
         style={styles.bottomWave}
-        source={require('./images/Bottom.png')}
+        source={require('../images/Bottom.png')}
       />
     </KeyboardAwareScrollView>
     // </SafeAreaView>
