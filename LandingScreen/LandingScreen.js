@@ -20,6 +20,7 @@ import analytics from '@react-native-firebase/analytics';
 import auth from '@react-native-firebase/auth';
 
 import styles from './styles';
+import SignUpButton from '../components/SignUpButton';
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -27,36 +28,6 @@ import styles from './styles';
  * @format
  * @flow strict-local
  */
-
-function SignUpButton(props: {
-  css: Object,
-  text: string,
-  platform: string,
-  accessibilityLabel: string,
-  onPress: () => void,
-}) {
-  return (
-    <>
-      <TouchableOpacity
-        style={[styles.buttonStyles, props.css]}
-        onPress={props.onPress}
-        activeOpacity={0.9}>
-        <Text
-          style={styles.buttonText}
-          accessibilityLabel={props.accessibilityLabel}>
-          {' '}
-          <Icon
-            name={props.platform}
-            size={20}
-            type="font-awesome-5"
-            color="#FFF"
-          />
-          {'   ' + props.text}
-        </Text>
-      </TouchableOpacity>
-    </>
-  );
-}
 
 const LandingScreen: () => React$Node = ({navigation}) => {
   // console.log('React native debugging');

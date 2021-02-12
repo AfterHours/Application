@@ -15,29 +15,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import styles from '../styles/email';
 import {Icon} from 'react-native-elements';
-
-function SignUpButton(props: {
-  css: Object,
-  text: string,
-  platform: string,
-  accessibilityLabel: string,
-  onPress: () => void,
-}) {
-  return (
-    <>
-      <TouchableOpacity
-        style={props.css}
-        onPress={props.onPress}
-        activeOpacity={0.9}>
-        <Text
-          style={styles.buttonText}
-          accessibilityLabel={props.accessibilityLabel}>
-          {props.text}
-        </Text>
-      </TouchableOpacity>
-    </>
-  );
-}
+import Button from '../components/Button';
 
 const TextBox = (props) => {
   const [secure, setSecure] = React.useState(props.secureTextEntry);
@@ -98,7 +76,7 @@ const LoginScreen: () => React$Node = () => {
           // value={value}
         />
         <View style={styles.buttonContainer}>
-          <SignUpButton
+          <Button
             css={styles.button}
             text={'Login'}
             accessibilityLabel={'Login Button'}
