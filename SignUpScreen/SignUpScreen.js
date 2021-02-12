@@ -9,12 +9,10 @@
  */
 
 import React from 'react';
-import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {TextField} from '@ubaids/react-native-material-textfield';
+import {Image, Text, View} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import styles from '../styles/email';
-import {Icon} from 'react-native-elements';
 import Button from '../components/Button';
 import TextBox from '../components/TextBox';
 
@@ -58,7 +56,6 @@ const SignUpScreen: () => React$Node = () => {
         />
         {/* <View> */}
         <TextBox
-          style={styles.textBox}
           label={'Password'}
           keyboardType={'default'}
           secureTextEntry={true}
@@ -66,7 +63,6 @@ const SignUpScreen: () => React$Node = () => {
           // value={value}
         />
         <TextBox
-          style={styles.textBox}
           label={'Confirm Password'}
           keyboardType={'default'}
           secureTextEntry={true}
