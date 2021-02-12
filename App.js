@@ -13,6 +13,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import LandingScreen from './LandingScreen/LandingScreen';
 import SignUpScreen from './SignUpScreen/SignUpScreen';
+import LoginScreen from './LoginScreen/LoginScreen';
 
 const Stack = createStackNavigator();
 
@@ -21,7 +22,8 @@ const App: () => React$Node = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home" headerMode="none">
         <Stack.Screen name="Home" component={LandingScreen} />
-        <Stack.Screen name="SignUpEmail" component={SignUpScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
