@@ -7,10 +7,8 @@
  */
 
 import React from 'react';
-import {SafeAreaView, View, Text, Image} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 
-import styles from './styles';
-import SignUpButton from '../components/SignUpButton';
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
