@@ -86,7 +86,12 @@ const LandingScreen: () => React$Node = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.loginContainer}>
-        <Text style={styles.loginText} onPress={() => getLog()}>
+        <Text
+          style={styles.loginText}
+          onPress={() => {
+            console.log('Login Button Clicked');
+            navigation.push('Login');
+          }}>
           Login
         </Text>
       </View>
@@ -131,7 +136,7 @@ const LandingScreen: () => React$Node = ({navigation}) => {
           css={styles.buttonEmail}
           onPress={() => {
             console.log('Email Button pressed');
-            navigation.push('SignUpEmail');
+            navigation.push('SignUp');
           }}
         />
       </View>
