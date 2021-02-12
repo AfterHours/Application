@@ -9,7 +9,6 @@ export default function TextBox(props) {
   return (
     <View>
       <TextField
-        style={styles.textField}
         label={props.label}
         keyboardType={props.keyboardType}
         secureTextEntry={secure}
