@@ -7,15 +7,7 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  Alert,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
-import {Icon} from 'react-native-elements';
+import {SafeAreaView, View, Text, Image} from 'react-native';
 import analytics from '@react-native-firebase/analytics';
 import auth from '@react-native-firebase/auth';
 
@@ -30,11 +22,6 @@ import SignUpButton from '../components/SignUpButton';
  */
 
 const LandingScreen: () => React$Node = ({navigation}) => {
-  // console.log('React native debugging');
-  function getLog() {
-    console.log('Text pressed');
-    Alert.alert('text pressed!', 'you should have pressed the text');
-  }
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
