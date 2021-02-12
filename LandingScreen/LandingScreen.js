@@ -6,11 +6,11 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {SafeAreaView, View, Text, Alert, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
 import analytics from '@react-native-firebase/analytics';
-// Icon.loadFont();
+import auth from '@react-native-firebase/auth';
 
 import styles from './styles';
 /**
@@ -57,6 +57,32 @@ const LandingScreen: () => React$Node = ({navigation}) => {
     console.log('Text pressed');
     Alert.alert('text pressed!', 'you should have pressed the text');
   }
+  // Set an initializing state whilst Firebase connects
+  const [initializing, setInitializing] = useState(true);
+  const [user, setUser] = useState();
+
+  // Handle user state changes
+  function onAuthStateChanged(user) {
+    setUser(user);
+    if (initializing) {
+      setInitializing(false);
+    }
+  }
+
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
+  }, []);
+
+  if (initializing) {
+    console.log('Connecting to firebase');
+  }
+  //
+  //TODO change this after for you page done
+  if (!user) {
+    navigation.push('SignUpEmail');
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.loginContainer}>
