@@ -80,7 +80,7 @@ const LandingScreen: () => React$Node = ({navigation}) => {
   //
   //TODO change this after for you page done
   if (!user) {
-    navigation.push('SignUpEmail');
+    // navigation.push('SignUpEmail');
   }
 
   return (
