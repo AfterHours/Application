@@ -1,23 +1,20 @@
 import auth from '@react-native-firebase/auth';
 
 export const signIn = async (email, password) => {
-  let code;
-  await auth()
+  return await auth()
     .signInWithEmailAndPassword(email, password)
     .then(() => {
       console.log('User account signed in!');
-      code = true;
+      return true;
     })
     .catch((error) => {
       console.error(error);
       if (error.code === 'auth/invalid-email') {
         console.log('The email address or password is invalid!');
-        code = false;
+        return false;
       } else {
-        //TODO WHY DOES THIS NOT RUN ON ERROR
-        console.log('Error with sign in', error);
+        console.log('Error with sign in');
       }
-      code = 'error';
+      return 'error';
     });
-  return code;
 };
