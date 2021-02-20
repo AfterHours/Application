@@ -25,20 +25,17 @@ const LoginScreen: () => React$Node = ({navigation}) => {
   async function login() {
     const status = await signIn(email, password);
     console.log('Status: ', status);
-    console.log('Email: ', email);
-    console.log('password: ', password);
     if (status) {
-      console.log('User successfully logged in!');
       setLoginStatus('passed');
       navigation.navigate('ForYou');
     } else if (status == false) {
-      console.log('User failed tp log in!');
       setLoginStatus('failed');
     } else {
-      console.log('User failed to login due to some unknown error');
       setLoginStatus('error');
     }
   }
+  //TODO
+  //Add some little red text to inform user of problem
 
   return (
     // <SafeAreaView style={email.container}>
