@@ -15,14 +15,16 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from '../styles/email';
 import Button from '../components/Button';
 import TextBox from '../components/TextBox';
+import {signIn} from '../auth/signIn';
 
 const LoginScreen: () => React$Node = ({navigation}) => {
-  const [value, onChangeText] = React.useState('');
+  const [email, setEmail] = React.useState(' ');
+  const [password, setPassword] = React.useState(' ');
   const [loginStatus, setLoginStatus] = React.useState('');
 
-  function login(user, pass) {
-    console.log('TODO SOMETHING');
-    const status = login(user, pass);
+  async function login() {
+    console.log('login function executed');
+    const status = await signIn(email, password);
     if (status) {
       console.log('User successfully logged in!');
       setLoginStatus('passed');
@@ -54,7 +56,7 @@ const LoginScreen: () => React$Node = ({navigation}) => {
         <TextBox
           label={'Email'}
           keyboardType={'email-address'}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => setEmail(text)}
           // value={value}
         />
         {/* <View> */}
@@ -63,7 +65,7 @@ const LoginScreen: () => React$Node = ({navigation}) => {
           label={'Password'}
           keyboardType={'default'}
           secureTextEntry={true}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => setPassword(text)}
           // value={value}
         />
         <View style={styles.buttonContainer}>
@@ -72,6 +74,7 @@ const LoginScreen: () => React$Node = ({navigation}) => {
             text={'Login'}
             accessibilityLabel={'Login Button'}
             onPress={() => {
+              console.log('attempting to login button pressed');
               login();
             }}
           />
