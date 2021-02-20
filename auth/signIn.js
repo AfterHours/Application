@@ -10,10 +10,10 @@ export const signIn = async (email, password) => {
     .catch((error) => {
       console.error(error);
       if (error.code === 'auth/invalid-email') {
-        console.log('That email address is invalid!');
+        console.log('That email address or password is invalid!');
         return false;
       } else {
-        console.log('Generic error with sign in');
+        console.log('Error with sign in', error);
       }
       return 'error';
     });
