@@ -23,12 +23,14 @@ const LoginScreen: () => React$Node = ({navigation}) => {
   const [loginStatus, setLoginStatus] = React.useState('');
 
   async function login() {
-    console.log('login function executed');
     const status = await signIn(email, password);
+    console.log('Status: ', status);
+    console.log('Email: ', email);
+    console.log('password: ', password);
     if (status) {
       console.log('User successfully logged in!');
       setLoginStatus('passed');
-      navigation.navigate('Login');
+      navigation.navigate('ForYou');
     } else if (status == false) {
       console.log('User failed tp log in!');
       setLoginStatus('failed');
@@ -74,7 +76,6 @@ const LoginScreen: () => React$Node = ({navigation}) => {
             text={'Login'}
             accessibilityLabel={'Login Button'}
             onPress={() => {
-              console.log('attempting to login button pressed');
               login();
             }}
           />
