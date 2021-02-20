@@ -18,6 +18,23 @@ import TextBox from '../components/TextBox';
 
 const LoginScreen: () => React$Node = ({navigation}) => {
   const [value, onChangeText] = React.useState('');
+  const [loginStatus, setLoginStatus] = React.useState('');
+
+  function login(user, pass) {
+    console.log('TODO SOMETHING');
+    const status = login(user, pass);
+    if (status) {
+      console.log('User successfully logged in!');
+      setLoginStatus('passed');
+      navigation.navigate('Login');
+    } else if (status == false) {
+      console.log('User failed tp log in!');
+      setLoginStatus('failed');
+    } else {
+      console.log('User failed to login due to some unknown error');
+      setLoginStatus('error');
+    }
+  }
 
   return (
     // <SafeAreaView style={email.container}>
@@ -55,9 +72,7 @@ const LoginScreen: () => React$Node = ({navigation}) => {
             text={'Login'}
             accessibilityLabel={'Login Button'}
             onPress={() => {
-              console.log('TODO SOMETHING');
-              //TODO add some logic here
-              navigation.push('ForYou');
+              login();
             }}
           />
         </View>
