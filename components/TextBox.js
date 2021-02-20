@@ -12,6 +12,7 @@ export default function TextBox(props) {
         label={props.label}
         keyboardType={props.keyboardType}
         secureTextEntry={secure}
+        onChangeText={(text) => props.onChangeText(text)}
       />
       {props.secureTextEntry && (
         <View style={styles.passwordIcon}>
