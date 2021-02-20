@@ -15,8 +15,9 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from '../styles/email';
 import Button from '../components/Button';
 import TextBox from '../components/TextBox';
+import {registerEmail} from '../auth/registerEmail';
 
-const SignUpScreen: () => React$Node = () => {
+const SignUpScreen: () => React$Node = ({navigation}) => {
   const [user, setUser] = React.useState({
     FName: '',
     LName: '',
@@ -24,6 +25,24 @@ const SignUpScreen: () => React$Node = () => {
     password: '',
     confirmPassword: '',
   });
+  const [state, setState] = React.useState('');
+  function onChangeText(name, value) {
+    user[name] = value;
+  }
+
+  //TODO do something when confirm pass and pass dont match
+  //TODO add some red status to indicate to the user what went wrong
+  //TODO add checking all fields were filled
+  async function register() {
+    if (user.password === user.confirmPassword) {
+      let status = await registerEmail(user.email, user.confirmPassword);
+      if (status) {
+        navigation.navigate('ForYou');
+      } else {
+        setState(status);
+      }
+    }
+  }
 
   return (
     // <SafeAreaView style={email.container}>
@@ -44,20 +63,20 @@ const SignUpScreen: () => React$Node = () => {
         <TextBox
           label={'First Name'}
           keyboardType={'default'}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => onChangeText('FName', text)}
 
           // value={value}
         />
         <TextBox
           label={'Last Name'}
           keyboardType={'default'}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => onChangeText('LName', text)}
           // value={value}
         />
         <TextBox
           label={'Email'}
           keyboardType={'email-address'}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => onChangeText('email', text)}
           // value={value}
         />
         {/* <View> */}
@@ -65,14 +84,14 @@ const SignUpScreen: () => React$Node = () => {
           label={'Password'}
           keyboardType={'default'}
           secureTextEntry={true}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => onChangeText('password', text)}
           // value={value}
         />
         <TextBox
           label={'Confirm Password'}
           keyboardType={'default'}
           secureTextEntry={true}
-          onChangeText={(text) => onChangeText(text)}
+          onChangeText={(text) => onChangeText('confirmPassword', text)}
           // value={value}
         />
         <View style={styles.buttonContainer}>
@@ -81,7 +100,7 @@ const SignUpScreen: () => React$Node = () => {
             text={'Create Account'}
             accessibilityLabel={'Create Account Button'}
             onPress={() => {
-              console.log('TODO SOMETHING');
+              register();
             }}
           />
         </View>
