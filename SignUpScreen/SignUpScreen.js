@@ -17,7 +17,13 @@ import Button from '../components/Button';
 import TextBox from '../components/TextBox';
 
 const SignUpScreen: () => React$Node = () => {
-  const [value, onChangeText] = React.useState('');
+  const [user, setUser] = React.useState({
+    FName: '',
+    LName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
 
   return (
     // <SafeAreaView style={email.container}>
