@@ -11,9 +11,11 @@ export const registerEmail = async (email, password) => {
       console.error(error);
       if (error.code === 'auth/email-already-in-use') {
         console.log('That email address is already in use!');
+        return 'taken';
       } else if (error.code === 'auth/invalid-email') {
         console.log('That email address is invalid!');
+        return 'invalid';
       }
-      return false;
+      return error;
     });
 };
